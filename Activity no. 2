@@ -1,0 +1,29 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+void printDate(int inputMonth, int inputDay, int inputYear){
+      string lettMonth[]={"January","February","March","April","May","June","July","August","September","October","November","December"};
+
+      if ((inputMonth == 2 && inputDay > 28) || ((inputMonth == 4 || inputMonth == 6 || inputMonth == 9 || inputMonth == 11) && inputDay > 30)){
+          cout<<"Invalid Date!";
+      }else{
+          cout<<lettMonth[inputMonth - 1] << " " << inputDay << ", " << inputYear; 
+      }
+  }
+
+int main() {
+
+  int month, day, year;
+  cout << "Enter month: ";
+  cin >> month;
+  cout << "Enter day: ";
+  cin >> day;
+  cout << "Enter year: ";
+  cin >> year;  
+
+  printDate(month, day, year);
+  
+  getch();
+  return 0;
+}
